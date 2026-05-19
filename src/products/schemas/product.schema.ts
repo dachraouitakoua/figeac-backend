@@ -7,33 +7,33 @@ export type ProductDocument = Product & Document;
 export class Product {
   // ── Service Qualité ──────────────────────────────────────────
   @Prop({ default: 'non-spécifié', required: true })
-  type_piece: string;
+  description: string;
 
   @Prop({ type: String, default: null })
   valider_par_qualite: string | null;
 
-  @Prop({ required: true })
+  @Prop()
   date_creation: Date;
 
-  @Prop({ required: true })
+  @Prop()
   order_ref: string;
 
-  @Prop({ required: true })
+  @Prop()
   cep: string;
 
-  @Prop({ required: true })
+  @Prop()
   article: string;
 
-  @Prop({ required: true })
+  @Prop()
   quantite: number;
 
-  @Prop({ required: true })
+  @Prop()
   decision: string;
 
-  @Prop({ required: true })
+  @Prop()
   nom_fournisseur: string;
 
-  @Prop({ required: true })
+  @Prop()
   valeur_ifs: number;
 
   // ── Service Finance ──────────────────────────────────────────
@@ -58,7 +58,7 @@ export class Product {
   cout_total: number | null;
 
   // ── Meta ─────────────────────────────────────────────────────
-  @Prop({ type: Types.ObjectId, ref: 'User', required: true })
+  @Prop({ type: Types.ObjectId, ref: 'User' })
   created_by: Types.ObjectId;
 }
 

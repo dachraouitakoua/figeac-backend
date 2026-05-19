@@ -4,7 +4,7 @@ import { Type } from 'class-transformer';
 export class CreateProductDto {
   @IsOptional()
   @IsString()
-  type_piece?: string;
+  description?: string;
 
   @IsOptional()
   @IsDateString()
