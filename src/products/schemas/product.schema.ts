@@ -33,6 +33,9 @@ export class Product {
   @Prop()
   nom_fournisseur: string;
 
+  @Prop({ type: String, default: null })
+  fournisseur_flux: string | null;
+
   @Prop()
   valeur_ifs: number;
 

@@ -36,6 +36,10 @@ export class UpdateQualiteDto {
   nom_fournisseur?: string;
 
   @IsOptional()
+  @IsString()
+  fournisseur_flux?: string;
+
+  @IsOptional()
   @IsNumber()
   @Type(() => Number)
   valeur_ifs?: number;
